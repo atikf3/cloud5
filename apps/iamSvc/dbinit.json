@@ -1,0 +1,59 @@
+{
+	"users": [{
+			"name": "admin",
+			"email": "admin@c.lo",
+			"password": "Clo123$",
+			"role": "admin",
+			"type": "admin",
+			"status": "enabled"
+		},
+		{
+			"name": "manager",
+			"email": "manager@c.lo",
+			"password": "Clo123$",
+			"role": "admin",
+			"type": "staff",
+			"status": "enabled"
+		},
+		{
+			"name": "reception",
+			"email": "reception@c.lo",
+			"password": "Clo123$",
+			"role": "user",
+			"type": "staff",
+			"status": "enabled"
+		},
+		{
+			"name": "roomservice",
+			"email": "roomservice@c.lo",
+			"password": "Clo123$",
+			"role": "user",
+			"type": "staff",
+			"status": "enabled"
+		},
+		{
+			"name": "arthurmorgan",
+			"email": "arthurmorgan@c.lo",
+			"password": "Clo123$",
+			"role": "user",
+			"type": "customer",
+			"status": "enabled"
+		},
+		{
+			"name": "johnmarston",
+			"email": "johnmarston@c.lo",
+			"password": "Clo123$",
+			"role": "user",
+			"type": "customer",
+			"status": "enabled"
+		},
+		{
+			"name": "johndoe",
+			"email": "johndoe@c.lo",
+			"password": "Clo123$",
+			"role": "user",
+			"type": "customer",
+			"status": "enabled"
+		}
+	]
+}

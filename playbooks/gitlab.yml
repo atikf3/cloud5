@@ -1,0 +1,7 @@
+---
+
+- hosts: all
+
+  roles:
+  - role: roles/gitlab_install
+    manager_hostname: "{{ groups['manager'][0] }}"

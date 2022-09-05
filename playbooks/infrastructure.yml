@@ -1,0 +1,16 @@
+---
+
+- hosts: all
+  # environment:
+    # PYTHONPATH: "/home/talamo_a/.local/lib/python2.7/site-packages"
+
+  roles:
+  # - role: roles/docker_swarm
+  #   manager_hostname: "{{ groups['manager'][0] }}"
+  # - role:  roles/docker_registry
+  #   manager_hostname: "{{ groups['manager'][0] }}"
+  #   # when: "'manager' in inventory_hostname" # Doesn't work?
+  - role: roles/docker_tickstack
+    # private_registry_address: "{{ groups['manager'][0] }}:5000"
+    manager_hostname: "{{ groups['manager'][0] }}"
+    # when: "'manager' in inventory_hostname" # Doesn't work?

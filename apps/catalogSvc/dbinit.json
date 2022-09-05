@@ -1,0 +1,240 @@
+{
+	"hotels": [{
+		"hotel_name": "Novotel",
+		"stars": 3,
+		"city": "Paris",
+		"address": "17 Pl. Dauphine, 75001 Paris",
+		"status": "enabled",
+		"creation_date": "2020-01-01T00:00:00+00:00"
+	  }, {
+		"hotel_name": "Hotel de Ville",
+		"stars": 3,
+		"city": "Paris",
+		"address": "17 Rue de la République, 75001 Paris",
+		"status": "enabled",
+		"creation_date": "2020-01-01T00:00:00+00:00"
+	  }, {
+		"hotel_name": "Hotel de la Paix",
+		"stars": 4,
+		"city": "Paris",
+		"address": "19 Rue de la République, 75001 Paris",
+		"status": "enabled",
+		"creation_date": "2020-01-01T00:00:00+00:00"
+	  }, {
+		"hotel_name": "Hotel Ritz",
+		"stars": 5,
+		"city": "Paris",
+		"address": "15 Pl. Vendôme, 75001 Paris",
+		"status": "enabled",
+		"creation_date": "2020-01-01T00:00:00+00:00"
+	  }, {
+		"hotel_name": "Le Meurice",
+		"stars": 5,
+		"city": "Paris",
+		"address": "228 Rue de Rivoli, 75001 Paris",
+		"status": "disabled",
+		"creation_date": "2020-01-01T00:00:00+00:00"
+	  }],
+	  "rooms": [{
+		"hotel_id": "Ritz",
+		"hotel_name": "Ritz",
+		"room_name": "Standard suite",
+		"price": 599,
+		"facilities_facility": [
+		  "Free WiFi",
+		  "Flat-screen TV",
+		  "air-conditioner",
+		  "Private bathroom",
+		  "Garden view",
+		  "Coffee machine"
+		],
+		"facilities_other": [
+		  "Toilet",
+		  "Bath or shower",
+		  "Towels",
+		  "Linen",
+		  "Desk",
+		  "Toaster",
+		  "Cable channels"
+		],
+		"beds": 1,
+		"persons": 2
+	  },
+	  {
+		"hotel_id": "Ritz",
+		"hotel_name": "Ritz",
+		"room_name": "Premium suite",
+		"price": 1399,
+		"facilities_facility": [
+		  "Free WiFi",
+		  "Flat-screen TV",
+		  "air-conditioner",
+		  "Private bathroom",
+		  "Garden view",
+		  "Coffee machine"
+		],
+		"facilities_other": [
+		  "Toilet",
+		  "Bath or shower",
+		  "Towels",
+		  "Linen",
+		  "Desk",
+		  "Toaster",
+		  "Cable channels"
+		],
+		"beds": 2,
+		"persons": 4
+	  },
+	  {
+		"hotel_id": "Hotel de Ville",
+		"hotel_name": "Hotel de Ville",
+		"room_name": "Standard room",
+		"price": 199,
+		"facilities_facility": [
+		  "Free WiFi",
+		  "Flat-screen TV",
+		  "air-conditioner",
+		  "Private bathroom",
+		  "Garden view",
+		  "Coffee machine"
+		],
+		"facilities_other": [
+		  "Toilet",
+		  "Bath or shower",
+		  "Towels",
+		  "Linen",
+		  "Desk",
+		  "Toaster",
+		  "Cable channels"
+		],
+		"beds": 1,
+		"persons": 2
+	  },
+	  {
+		"hotel_id": "Novotel",
+		"hotel_name": "Novotel",
+		"room_name": "Basic room",
+		"price": 99,
+		"facilities_facility": [
+		  "Free WiFi",
+		  "Flat-screen TV",
+		  "air-conditioner",
+		  "Private bathroom",
+		  "Garden view",
+		  "Coffee machine"
+		],
+		"facilities_other": [
+		  "Toilet",
+		  "Bath or shower",
+		  "Towels",
+		  "Linen",
+		  "Desk",
+		  "Toaster",
+		  "Cable channels"
+		],
+		"beds": 1,
+		"persons": 2
+	  },
+	  {
+		"hotel_id": "Novotel",
+		"hotel_name": "Novotel",
+		"room_name": "Basic split room",
+		"price": 99,
+		"facilities_facility": [
+		  "Free WiFi",
+		  "Flat-screen TV",
+		  "air-conditioner",
+		  "Private bathroom",
+		  "Garden view",
+		  "Coffee machine"
+		],
+		"facilities_other": [
+		  "Toilet",
+		  "Bath or shower",
+		  "Towels",
+		  "Linen",
+		  "Desk",
+		  "Toaster",
+		  "Cable channels"
+		],
+		"beds": 2,
+		"persons": 2
+	  },
+
+	  {
+		"hotel_id": "Novotel",
+		"hotel_name": "Novotel",
+		"room_name": "Basic plus room",
+		"price": 159,
+		"facilities_facility": [
+		  "Free WiFi",
+		  "Flat-screen TV",
+		  "air-conditioner",
+		  "Private bathroom",
+		  "Garden view",
+		  "Coffee machine"
+		],
+		"facilities_other": [
+		  "Toilet",
+		  "Bath or shower",
+		  "Towels",
+		  "Linen",
+		  "Desk",
+		  "Toaster",
+		  "Cable channels"
+		],
+		"beds": 2,
+		"persons": 4
+	  },
+
+	  {
+		"hotel_id": "Novotel",
+		"hotel_name": "Novotel",
+		"room_name": "Basic plus split room",
+		"price": 159,
+		"facilities_facility": [
+		  "Free WiFi",
+		  "Flat-screen TV",
+		  "air-conditioner",
+		  "Private bathroom",
+		  "Garden view",
+		  "Coffee machine"
+		],
+		"facilities_other": [
+		  "Toilet",
+		  "Bath or shower",
+		  "Towels",
+		  "Linen",
+		  "Desk",
+		  "Toaster",
+		  "Cable channels"
+		],
+		"beds": 4,
+		"persons": 4
+	  },
+	  {
+		"hotel_id": "Novotel",
+		"hotel_name": "Novotel",
+		"room_name": "Economic room",
+		"price": 79,
+		"facilities_facility": [
+		  "Free WiFi",
+		  "Flat-screen TV",
+		  "air-conditioner",
+		  "Private bathroom",
+		  "Garden view",
+		  "Coffee machine"
+		],
+		"facilities_other": [
+		  "Toilet",
+		  "Bath or shower",
+		  "Towels",
+		  "Linen",
+		  "Desk",
+		  "Toaster",
+		  "Cable channels"
+		],
+		"beds": 1,
+		"persons": 1
+	  }]
+}

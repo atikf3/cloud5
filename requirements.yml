@@ -1,0 +1,9 @@
+---
+collections:
+  - name: community.general
+  - name: ansible.netcommon
+
+roles:
+  - name: geerlingguy.docker
+  - name: atosatto.docker-swarm
+  - name: geerlingguy.gitlab

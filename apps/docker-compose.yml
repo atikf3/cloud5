@@ -1,0 +1,118 @@
+version: '3.1'
+
+services:
+  db:
+    image: mongo:latest
+    restart: always
+    ports:
+      - 27017:27017
+    command: mongod --quiet --logpath /var/log/mongodb/mongod.log
+    volumes:
+      - ./init-mongo.sh:/docker-entrypoint-initdb.d/init-mongo.sh:ro
+      # - mongodata:/data/db
+    env_file:
+        - ../.env
+    # networks:
+    #   - backend
+
+# A mongo-express container that is used to view the database.
+  # db-express:
+  #     image: mongo-express
+  #     restart: always
+  #     environment:
+  #         ME_CONFIG_MONGODB_SERVER: db
+  #         ME_CONFIG_MONGODB_PORT: 27017
+  #         ME_CONFIG_MONGODB_ENABLE_ADMIN: false
+  #         ME_CONFIG_MONGODB_AUTH_DATABASE: ${MONGO_INITDB_DATABASE:-admin}
+  #         ME_CONFIG_MONGODB_AUTH_USERNAME: ${MONGODB_USERNAME}
+  #         ME_CONFIG_MONGODB_AUTH_PASSWORD: ${MONGODB_PASSWORD}
+  #         ME_CONFIG_BASICAUTH_USERNAME: ${MONGOEXPRESS_LOGIN}
+  #         ME_CONFIG_BASICAUTH_PASSWORD: ${MONGOEXPRESS_PASSWORD}
+  #     depends_on:
+  #         - db
+  #     ports:
+  #       - "8081:8081"
+
+  iamSvc:
+    image: clo5api:latest
+    ports:
+      - "5051:5051"
+    restart: always
+    depends_on: 
+      - db
+    command: app.py
+    volumes:
+      - ./iamSvc:/api
+    env_file:
+        - ../.env
+    environment:
+      APP_PORT: 5051
+      APP_PRELOAD_DB: true
+    # networks:
+    #   - frontend
+    #   - backend
+    # deploy with 3 replicas in the case of failure of one of the containers
+  #  deploy:
+  #    mode: replicated
+  #    replicas: 3
+
+  catalogSvc:
+    image: clo5api:latest
+    ports:
+      - "5052:5052"
+    restart: always
+    depends_on: 
+      - db
+    command: app.py
+    volumes:
+      - ./catalogSvc:/api
+    env_file:
+        - ../.env
+    environment:
+      APP_PORT: 5052
+      APP_PRELOAD_DB: true
+
+  bookBillSvc:
+    image: clo5api:latest
+    ports:
+      - "5053:5053"
+    restart: always
+    depends_on: 
+      - db
+    command: app.py
+    volumes:
+      - ./bookingAndBillingSvc:/api
+    env_file:
+        - ../.env
+    environment:
+      APP_PORT: 5053
+
+  mailingSvc:
+    image: clo5api:latest
+    container_name: mailingSvc
+    ports:
+      - "5054:5054"
+    restart: always
+    depends_on: 
+      - db
+    command: app.py
+    volumes:
+      - ./mailingSvc:/api
+    env_file:
+        - ../.env
+    environment:
+      APP_PORT: 5054
+
+# networks:
+#     frontend:
+#         driver: bridge
+#     backend:
+#         driver: bridge
+
+# volumes: 
+#     mongodata:
+#         driver: local
+#     api:
+#         driver: local
+#     nginx_data:
+#         driver: local

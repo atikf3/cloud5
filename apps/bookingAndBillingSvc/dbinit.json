@@ -1,0 +1,35 @@
+{
+	"users": [{
+			"name": "l'admin",
+			"email": "admin@c.lo",
+			"password": "Clo123$",
+			"role": "admin",
+			"type": "admin",
+			"status": "enabled"
+		},
+		{
+			"name": "levendeur",
+			"email": "vendeur@c.lo",
+			"password": "Clo123$",
+			"role": "user",
+			"type": "seller",
+			"status": "enabled"
+		},
+		{
+			"name": "l'acheteur",
+			"email": "acheteur@c.lo",
+			"password": "Clo123$",
+			"role": "user",
+			"type": "buyer",
+			"status": "enabled"
+		},
+		{
+			"name": "bob",
+			"email": "bob@c.lo",
+			"password": "Clo123$",
+			"role": "user",
+			"type": "buyer",
+			"status": "enabled"
+		}
+	]
+}
